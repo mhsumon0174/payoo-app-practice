@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0-beta.8/daisyui.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-slate-950">
+    <section class="max-w-md min-h-screen bg-slate-200 mx-auto py-6 ">
+<header>
+    <nav class="flex justify-center items-center">
+        <div class="mt-35 mb-10 flex w-9/12 relative justify-center items-center" >
+            <img class="w-56 absolute" src="assets/2.png" alt="">
+            <img class="w-25 ml-10" src="assets/1.png" alt="">
+        </div>
+    </nav>
+</header>
+
+    <div class="hero-content flex-col lg:flex-row-reverse mt-20">
+      
+      <div class="card bg-white w-full max-w-sm shrink-0 shadow-2xl">
+        <form class="card-body">
+          <fieldset class="fieldset">
+            <label class="fieldset-label font-bold">Mobile Number</label>
+            <input id="user-id" required type="number" class="input" placeholder="Enter Your Number" />
+            <label class="fieldset-label font-bold">4 Digit Pin</label>
+            <input id="user-pass" required type="password" class="input" placeholder="Enter 4 Digit Pin" />
+            <div><a class="link link-hover font-bold">Forgot password?</a></div>
+            <button id="login-btn" class="btn btn-info mt-4 text-white font-bold text-lg">Login</button>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+ 
+    </section>
+    <script src="main.js"></script>
+</body>
+</html>
