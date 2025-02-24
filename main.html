@@ -1,11 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <h1>Thanks For Log in.Lets Fuck.Okay?</h1>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0-beta.8/daisyui.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <section class="max-w-md min-h-screen bg-slate-200 mx-auto px-4">
+      <header>
+        <nav class="border-b-1 pb-3">
+          <div class="flex justify-between items-center">
+            <div class="flex">
+              <img class="w-16" src="assets/1.png" alt="" />
+              <div class="mt-5">
+                <h1  class="font-bold">$ <span id="available-amount">45000</span></h1>
+                <p class="border rounded p-1">Available Balance</p>
+              </div>
+            </div>
+            <div>
+              <button id="log-out" class="btn btn-success">Log Out</button>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <section class="mt-10">
+        <h1 class="font-extrabold text-2xl">Welcome To My Payooo!</h1>
+        <p class="mt-4">
+          Enjoy easy and convenient financial services with us. Cashout charge
+          is low and
+        </p>
+
+        <div class="cards gap-3  mt-8 grid grid-cols-3">
+          <div id="add-money-box" class="box cursor-pointer rounded-lg p-3 border text-center">
+            <img class="mx-auto" src="assets/add-money.png" alt="" />
+            <h3>Add Money</h3>
+          </div>
+          <div id="cash-out-box" class="box cursor-pointer rounded-lg p-3 border text-center">
+            <img class="mx-auto" src="assets/cash-out.png" alt="" />
+            <h3>Cash Out</h3>
+          </div>
+          <div class="box cursor-pointer rounded-lg p-3 border text-center">
+            <img class="mx-auto" src="assets/transfer.png" alt="" />
+            <h3>Transfer</h3>
+          </div>
+          <div class="box cursor-pointer rounded-lg p-3 border text-center">
+            <img class="mx-auto" src="assets/bonus.png" alt="" />
+            <h3>Get Bonus</h3>
+          </div>
+          <div class="box cursor-pointer rounded-lg p-3 border text-center">
+            <img class="mx-auto" src="assets/pay-bill.png" alt="" />
+            <h3>Pay Bill</h3>
+          </div>
+          <div class="box cursor-pointer rounded-lg p-3 border text-center">
+            <img class="mx-auto" src="assets/transaction.png" alt="" />
+            <h3>Transactions</h3>
+          </div>
+        </div>
+      </section>
+
+      <section id="add-money-section" class="mt-35 hidden ">
+        <h1 class="text-xl text-center font-bold">Add Money</h1>
+        <div class="hero-content flex-col lg:flex-row-reverse ">
+      
+            <div class="card bg-white w-full max-w-sm shrink-0 shadow-2xl">
+              <form class="card-body">
+                <fieldset class="fieldset">
+                    <label class="fieldset-label font-bold">Medium</label>
+                    <select class="select">
+                        <option disabled selected>Select a Bank</option>
+                        <option value="sonali" >Sonali Bank PLC</option>
+                        <option value="ific">IFIC Bank PLC</option>
+                        <option value="pubali">Pubali Bank PLC</option>
+                        <option value="islami">Islami Bank Bangladesh PLC</option>
+                      </select>
+                  <label class="fieldset-label font-bold">Mobile Number</label>
+                  <input id="user-number" required type="number" class="input" placeholder="Enter Your Number" />
+                  <label class="fieldset-label font-bold">Amount</label>
+                  <input id="amount" required type="number" class="input" placeholder="Enter Amount" />
+                  
+                  <label class="fieldset-label font-bold">4 Digit Pin</label>
+                  <input id="user-pass" required type="password" class="input" placeholder="Enter 4 Digit Pin" />
+                  
+                  
+                  <button id="add-money-btn" class="btn btn-error mt-4 text-white font-bold text-lg">Add Money</button>
+                </fieldset>
+              </form>
+            </div>
+          </div>
+      </section>
+      <section id="cash-out-section" class="mt-35 hidden">
+        <h1 class="text-xl text-center font-bold">Cash Withdrawl</h1>
+        <div class="hero-content flex-col lg:flex-row-reverse ">
+      
+            <div class="card bg-white w-full max-w-sm shrink-0 shadow-2xl">
+              <form class="card-body">
+                <fieldset class="fieldset">
+                    <label class="fieldset-label font-bold">Medium</label>
+                    <select class="select">
+                        <option disabled selected>Select a Bank</option>
+                        <option value="sonali" >Sonali Bank PLC</option>
+                        <option value="ific">IFIC Bank PLC</option>
+                        <option value="pubali">Pubali Bank PLC</option>
+                        <option value="islami">Islami Bank Bangladesh PLC</option>
+                      </select>
+                  <label class="fieldset-label font-bold">Agent Number</label>
+                  <input id="cash-out-number" required type="number" class="input" placeholder="Enter Agent Number" />
+                  <label class="fieldset-label font-bold">Amount</label>
+                  <input id="cash-out-amount" required type="number" class="input" placeholder="Enter Amount" />
+                  
+                  <label class="fieldset-label font-bold">4 Digit Pin</label>
+                  <input id="
+                  cash-out-pass" required type="password" class="input" placeholder="Enter 4 Digit Pin" />
+                  
+                  
+                  <button id="cash-out-btn" class="btn btn-error mt-4 text-white font-bold text-lg">Cash Out</button>
+                </fieldset>
+              </form>
+            </div>
+          </div>
+      </section>
+    </section>
+    <script src="toggle.js"></script>
+    <script src="cash-out.js"></script>
+<script src="add-money.js"></script>
+<script src="log-out.js"></script>
+
 </body>
 </html>
