@@ -11,6 +11,21 @@ document
     console.log(totalAmount);
     document.getElementById("available-amount").innerText = totalAmount;
     document.getElementById("amount").value = "";
-    document.getElementById("user-number").value = "";
+    const accountNumber=document.getElementById("user-number").value;
     document.getElementById("user-pass").value = "";
+    const p=document.createElement('p');
+    p.innerText=`
+    $${amount} Added From Account- ${accountNumber}
+    
+    `
+    p.style.background='lightGreen';
+    p.style.marginBottom='4px'
+    p.style.textAlign='center';
+    p.style.color='white';
+    p.style.fontWeight='bold';
+    p.style.border='2px solid black';
+    p.style.borderRadius='5px';
+    const transactionList=document.getElementById('transaction-list');
+    transactionList.appendChild(p);
+    document.getElementById("user-number").value='';
   });

@@ -53,14 +53,14 @@
             <img class="mx-auto" src="assets/pay-bill.png" alt="" />
             <h3>Pay Bill</h3>
           </div>
-          <div class="box cursor-pointer rounded-lg p-3 border text-center">
+          <div id="transaction-box" class="box cursor-pointer rounded-lg p-3 border text-center">
             <img class="mx-auto" src="assets/transaction.png" alt="" />
             <h3>Transactions</h3>
           </div>
         </div>
       </section>
 
-      <section id="add-money-section" class="mt-35 hidden ">
+      <section id="add-money-section" class="mt-5 hidden ">
         <h1 class="text-xl text-center font-bold">Add Money</h1>
         <div class="hero-content flex-col lg:flex-row-reverse ">
       
@@ -75,7 +75,7 @@
                         <option value="pubali">Pubali Bank PLC</option>
                         <option value="islami">Islami Bank Bangladesh PLC</option>
                       </select>
-                  <label class="fieldset-label font-bold">Mobile Number</label>
+                  <label class="fieldset-label font-bold">Account Number</label>
                   <input id="user-number" required type="number" class="input" placeholder="Enter Your Number" />
                   <label class="fieldset-label font-bold">Amount</label>
                   <input id="amount" required type="number" class="input" placeholder="Enter Amount" />
@@ -90,7 +90,7 @@
             </div>
           </div>
       </section>
-      <section id="cash-out-section" class="mt-35 hidden">
+      <section id="cash-out-section" class="mt-5 hidden">
         <h1 class="text-xl text-center font-bold">Cash Withdrawl</h1>
         <div class="hero-content flex-col lg:flex-row-reverse ">
       
@@ -111,8 +111,7 @@
                   <input id="cash-out-amount" required type="number" class="input" placeholder="Enter Amount" />
                   
                   <label class="fieldset-label font-bold">4 Digit Pin</label>
-                  <input id="
-                  cash-out-pass" required type="password" class="input" placeholder="Enter 4 Digit Pin" />
+                  <input id="cash-out-pass" required type="password" class="input" placeholder="Enter 4 Digit Pin" />
                   
                   
                   <button id="cash-out-btn" class="btn btn-error mt-4 text-white font-bold text-lg">Cash Out</button>
@@ -121,11 +120,19 @@
             </div>
           </div>
       </section>
+      <section id="transaction-section" class="mt-5 hidden">
+        <h1 class="text-2xl font-bold text-center">Transaction History</h1>
+      <div id="transaction-list" class="mt-4 p-4">
+
+      </div>
+      
+      </section>
     </section>
     <script src="toggle.js"></script>
     <script src="cash-out.js"></script>
 <script src="add-money.js"></script>
 <script src="log-out.js"></script>
+<script src="transaction.js"></script>
 
 </body>
 </html>
