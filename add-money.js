@@ -18,7 +18,7 @@ document
     $${amount} Added From Account- ${accountNumber}
     
     `
-    p.style.background='lightGreen';
+    p.classList.add("bg-green-500")
     p.style.marginBottom='4px'
     p.style.textAlign='center';
     p.style.color='white';
